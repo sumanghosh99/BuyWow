@@ -1,8 +1,8 @@
 {
-  "name": "PROJECT1",
+  "name": "BuyWow",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "Construct week Project",
+  "main": "index.js",
   "scripts": {
     "server": "nodemon src/server.js"
   },
