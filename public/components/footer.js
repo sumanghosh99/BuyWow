@@ -1,5 +1,5 @@
 function footer() {
-  return ` <div id="footerNav">
+    return ` <div id="footerNav">
     <div id="footerTop">
       <div id="upper">
         <div>
