@@ -100,6 +100,15 @@
                                         <span class="product-container-desc-price">₹<%=products.price%></span>
                               </div>
                               
+                              <script>
+                                        document.getElementById(`product-container-image<%=i%>`).addEventListener("click", function() {productDescriptionPage(`<%=items[i]%>`);});
+                                        function productDescriptionPage(item){
+                                        localStorage.setItem("productDescriptionpageitem",JSON.stringify(item));
+                                        let productDescriptionpageitem = JSON.parse(localStorage.getItem("productDescriptionpageitem"))
+                                        console.log(productDescriptionpageitem);
+                                        window.location.href ="/productDetails";
+     }
+                              </script>
 
 
 
@@ -109,12 +118,19 @@
           </main>
           <footer></footer>
           <a href=""></a>
-          <a href="/productitem"></a>
+          <a href="/nutrition&health"></a>
      </body>
 </html>
 
 <!-- script to navbar and footer or header and footer tags by noori fathima-->
 <script type="module">
+
+// function productDescriptionPage(item){
+//           localStorage.setItem("productDescriptionpageitem",JSON.stringify(item));
+//           let productDescriptionpageitem = JSON.parse(localStorage.getItem("productDescriptionpageitem"))
+//           console.log(productDescriptionpageitem);
+//           window.location.href ="/productDetails";
+//      }
 
      import nav from "/components/navbar.js";
 
