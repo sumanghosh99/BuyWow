@@ -36,7 +36,75 @@
                      </select>
               </div>
                     <div id="nutritionContainer">
-                         
+                         <%var i = 0;%>
+
+                         <% items.forEach(products => { %>
+                              <%i++%>
+
+                         <style>
+                              .product-container<%=i%>{
+                                   margin-left:5%; 
+                                   margin-right:10px;
+                                   width: 320px;
+                                   height: 280px;
+                                   font-size: 20px;
+                                   text-align:center;
+                                   border-radius: 3%;
+                                   font-family: "Neutra Text TF",sans-serif;
+                                   font-weight: 600;
+                                   border: 2px solid rgb(255, 255, 255);
+                                   line-height:38px ;
+                                   background: url(<%=products.imgFront%>);
+                                   cursor: pointer;
+                                   background-position: center;
+                              }
+
+                              .product-container<%=i%>:hover{
+                                   background: url(<%=products.imgBack%>);
+                              }
+
+                              .product-container<%=i%>:hover  .product-container-image-buttons>span{
+                              visibility: visible;
+                              }
+
+                              #productDescriptionPageid<%=i%>:hover{
+                                   cursor: pointer;
+
+                              }
+                              #product-container-image<%=i%>{
+                                   height:230px;
+
+                              }
+
+                              </style>
+
+                              <div>
+                              <div class="product-container<%=i%>" >
+                              <div id="product-container-image<%=i%>"></div>
+                              
+                                   <div class="product-container-image-buttons">
+                                   <span class="bg_slider" id="QuickShopitem"><span   >QUICK SHOP</span><span class="fa fa-eye" style="margin-left: 8px; font-size: 20px;width: 25px;margin-top:8px;"></span></span>
+                                   <span class="bg_slider" id="cartid"><span >ADD TO CART</span><span class="fa fa-shopping-cart" style="margin-left: 10px; font-size: 20px;width: 25px;margin-top:8px;"></span></span>
+                                   </div>
+                                   </div>
+                              
+                              
+                              <div class="product-container-desc" >
+                                        <span id="productDescriptionPageid<%=i%>"><%=products.title%></span><br>
+                                        <span class="fa fa-star " style="color: orange;"></span>
+                                        <span class="fa fa-star " style="color: orange;"></span>
+                                        <span class="fa fa-star " style="color: orange;"></span>
+                                        <span class="fa fa-star " style="color: orange;"></span>
+                                        <span class="fa fa-star " style="color: orange;"></span>
+                                        <span class="product-container-desc-reviews"><%=Math.floor((Math.random()*200)+40)%> reviews</span><br>
+                                        <span class="product-container-desc-price">₹<%=products.price%></span>
+                              </div>
+                              
+
+
+
+                    </div>
+                    <% }) %>
                     </div>
           </main>
           <footer></footer>
@@ -164,8 +232,8 @@
 <script type="module">
      import itemdetails from "/components/productitem.js";
      import nutrition from "/components/nutritionData.js";
-     let arr=nutrition();
-     itemdetails(arr);
+     // let arr=nutrition();
+     // itemdetails(arr);
 
           // styling dynamicaly to grid while clicking three dots 
      document.getElementById("threedott").addEventListener("click",()=>{

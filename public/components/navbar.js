@@ -31,20 +31,20 @@ function nav() {
   <div id="catList">
     <div id="catDiv">
       <div class="dropdown">
-        <a href="/productitem"> <button class="dropbtn buttons">Nutrition & Health</button></a>
+        <a href="/nutrition&health"> <button class="dropbtn buttons">Nutrition & Health</button></a>
         <div class="dropdownContent">
-          <a href="/productitem">Omega Fatty Acids</a>
-          <a href="/productitem">Multivitamins</a>
-          <a href="/productitem">Weight Management</a>
-          <a href="/productitem">Immunity Care</a>
-          <a href="/productitem">Detox</a>
-          <a href="/productitem">Gut Health</a>
-          <a href="/productitem">Protiens</a>
-          <a href="/productitem">Antioxidants</a>
-          <a href="/productitem">Men's Health</a>
-          <a href="/productitem">Vitamins</a>
-          <a href="/productitem">Skin & Hair Nutrition</a>
-          <a href="/productitem">Specialty Supplements</a>
+          <a href="/nutrition&health">Omega Fatty Acids</a>
+          <a href="/nutrition&health">Multivitamins</a>
+          <a href="/nutrition&health">Weight Management</a>
+          <a href="/nutrition&health">Immunity Care</a>
+          <a href="/nutrition&health">Detox</a>
+          <a href="/nutrition&health">Gut Health</a>
+          <a href="/nutrition&health">Protiens</a>
+          <a href="/nutrition&health">Antioxidants</a>
+          <a href="/nutrition&health">Men's Health</a>
+          <a href="/nutrition&health">Vitamins</a>
+          <a href="/nutrition&health">Skin & Hair Nutrition</a>
+          <a href="/nutrition&health">Specialty Supplements</a>
         </div>
       </div>
       <div class="dropdown">

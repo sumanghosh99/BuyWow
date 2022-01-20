@@ -1,5 +1,7 @@
 const express=require("express");
 
+const nutritionData = require("../models/productSchema")
+
 const router=express.Router();
 
 router.get("",(req,res)=>{
@@ -22,8 +24,9 @@ router.get("/login",(req,res)=>{
 router.get("/register",(req,res)=>{
     res.render("register");
 });
-router.get("/productitem",(req,res)=>{
-    res.render("productitem");
+router.get("/nutrition&health",async(req,res)=>{
+    const items = await nutritionData.find();
+    res.render("productitem",{items:items});
 });
 router.get("/productDetails",(req,res)=>{
     res.render("productDetails");
