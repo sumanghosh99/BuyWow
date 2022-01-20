@@ -142,7 +142,7 @@ function nav() {
       <img style="margin-top: 5px;" width="40px" height="40px" src="images/remove-icon.png" id="close" />
   </div>
   <div id="cartItems">
-      <p style = "color: #9F9F9F;">No product is in the cart.</p>
+      <p style = "color: #9F9F9F; text-align:center;">No product is in the cart.</p>
   </div>
   <div id="checkout">
   <hr>
@@ -151,7 +151,7 @@ function nav() {
   <div><p style = "color: #B2B2B2;">Taxes and shipping calculated at checkout</p></div>
   <div id="cDiv">
   <a href="checkout/checkoutpage.html"><button id = "cbtn">CHECK OUT</button></a>
-  <a href = "home.html">Update Cart</a></div>
+  <a href = "">Update Cart</a></div>
   </div>
 </div>
 
