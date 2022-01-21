@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-
-<head>
+<<<<<<< HEAD <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,133 +11,129 @@
     <link rel="stylesheet" href="./styles/productitem.css">
     <script src="https://kit.fontawesome.com/0ae10de0e5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="/styles/footer.css" />
-    <link rel="stylesheet" type="text/css" href="/styles/navbar.css" />
-=======
-<head> 
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Nutrion && Health products</title>
-     <script src="https://kit.fontawesome.com/f3afea15cd.js" crossorigin="anonymous"></script>
-     <link href="http://fonts.cdnfonts.com/css/neutra-text-alt" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link rel="stylesheet" href="./styles/productitem.css">
-     <script
-     src="https://kit.fontawesome.com/0ae10de0e5.js"
-     crossorigin="anonymous"
-   ></script>
-   <link rel="stylesheet" type="text/css" href="/styles/footer.css" />
-   <link rel="stylesheet" type="text/css" href="/styles/navbar.css" />
->>>>>>> b70d58649418bb0626eef85b5ed24035f1ae04c0
-</head>
+    <link rel="stylesheet" type="text/css" href="/styles/navbar.css" /> =======
 
-<body>
-    <header></header>
-    <main>
-        <div id="headDiv">
-            <h1 id="pageHeadDiv">NUTRITION & HEALTH</h1>
-            <p>Never let nutritional supplements take a back seat in your self-care regimen. Ensure that your body receives complete nutrition with the WOW Life Science range of Nutritional Supplements.<br> Plant-based supplements with nutritional value
-                that complements your regular diet.</p>
-            <div id="dotteddiv">
-                <div id="twodott"> <i class="far fa-dot-circle"></i><i class="far fa-dot-circle"></i></div>
-                <div id="threedott"> <i class="far fa-dot-circle"></i> <i class="far fa-dot-circle"></i> <i class="far fa-dot-circle"></i></i>
-                </div>
-                <div id="fourdott"> <i class="far fa-dot-circle"></i> <i class="far fa-dot-circle"></i> <i class="far fa-dot-circle"></i> <i class="far fa-dot-circle"></i></div>
-            </div>
-            <select name="" id="typesort">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nutrion && Health products</title>
+        <script src="https://kit.fontawesome.com/f3afea15cd.js" crossorigin="anonymous"></script>
+        <link href="http://fonts.cdnfonts.com/css/neutra-text-alt" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./styles/productitem.css">
+        <script src="https://kit.fontawesome.com/0ae10de0e5.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="/styles/footer.css" />
+        <link rel="stylesheet" type="text/css" href="/styles/navbar.css" /> >>>>>>> b70d58649418bb0626eef85b5ed24035f1ae04c0
+    </head>
+
+    <body>
+        <%- include("../public/components/navbar.ejs")%>
+            <main>
+                <div id="headDiv">
+                    <h1 id="pageHeadDiv">NUTRITION & HEALTH</h1>
+                    <p>Never let nutritional supplements take a back seat in your self-care regimen. Ensure that your body receives complete nutrition with the WOW Life Science range of Nutritional Supplements.<br> Plant-based supplements with nutritional
+                        value that complements your regular diet.</p>
+                    <div id="dotteddiv">
+                        <div id="twodott"> <i class="far fa-dot-circle"></i><i class="far fa-dot-circle"></i></div>
+                        <div id="threedott"> <i class="far fa-dot-circle"></i> <i class="far fa-dot-circle"></i> <i class="far fa-dot-circle"></i></i>
+                        </div>
+                        <div id="fourdott"> <i class="far fa-dot-circle"></i> <i class="far fa-dot-circle"></i> <i class="far fa-dot-circle"></i> <i class="far fa-dot-circle"></i></div>
+                    </div>
+                    <select name="" id="typesort">
                          <option>Sorting Featured</option>
                          <option value="lowtohigh"> low to high price</option>
                          <option value="hightolow"> high to low price</option>
                          <option value="atoz">A-Z</option>
                          <option value="ztoa">Z-A</option>
                      </select>
-        </div>
-        <div id="nutritionContainer">
-            <%var i = 0;%>
+                </div>
+                <div id="nutritionContainer">
+                    <%var i = 0;%>
 
-                <% items.forEach(products => { %>
-                    <%i++%>
+                        <% items.forEach(products => { %>
+                            <%i++%>
 
-                        <style>
-                            .product-container<%=i%> {
-                                margin-left: 5%;
-                                margin-right: 10px;
-                                width: 320px;
-                                height: 280px;
-                                font-size: 20px;
-                                text-align: center;
-                                border-radius: 3%;
-                                font-family: "Neutra Text TF", sans-serif;
-                                font-weight: 600;
-                                border: 2px solid rgb(255, 255, 255);
-                                line-height: 38px;
-                                background: url(<%=products.imgFront%>);
-                                cursor: pointer;
-                                background-position: center;
-                            }
-                            
-                            .product-container<%=i%>:hover {
-                                background: url(<%=products.imgBack%>);
-                            }
-                            
-                            .product-container<%=i%>:hover .product-container-image-buttons>span {
-                                visibility: visible;
-                            }
-                            
-                            #productDescriptionPageid<%=i%>:hover {
-                                cursor: pointer;
-                            }
-                            
-                            #product-container-image<%=i%> {
-                                height: 230px;
-                            }
-                        </style>
+                                <style>
+                                    .product-container<%=i%> {
+                                        margin-left: 5%;
+                                        margin-right: 10px;
+                                        width: 320px;
+                                        height: 280px;
+                                        font-size: 20px;
+                                        text-align: center;
+                                        border-radius: 3%;
+                                        font-family: "Neutra Text TF", sans-serif;
+                                        font-weight: 600;
+                                        border: 2px solid rgb(255, 255, 255);
+                                        line-height: 38px;
+                                        background: url(<%=products.imgFront%>);
+                                        cursor: pointer;
+                                        background-position: center;
+                                    }
+                                    
+                                    .product-container<%=i%>:hover {
+                                        background: url(<%=products.imgBack%>);
+                                    }
+                                    
+                                    .product-container<%=i%>:hover .product-container-image-buttons>span {
+                                        visibility: visible;
+                                    }
+                                    
+                                    #productDescriptionPageid<%=i%>:hover {
+                                        cursor: pointer;
+                                    }
+                                    
+                                    #product-container-image<%=i%> {
+                                        height: 230px;
+                                    }
+                                </style>
 
-                        <div>
-                            <div class="product-container<%=i%>">
-                                <div id="product-container-image<%=i%>"></div>
+                                <div>
+                                    <div class="product-container<%=i%>">
+                                        <div id="product-container-image<%=i%>"></div>
 
-                                <div class="product-container-image-buttons">
-                                    <span class="bg_slider" id="QuickShopitem"><span   >QUICK SHOP</span><span class="fa fa-eye" style="margin-left: 8px; font-size: 20px;width: 25px;margin-top:8px;"></span></span>
-                                    <span class="bg_slider" id="cartid"><span >ADD TO CART</span><span class="fa fa-shopping-cart" style="margin-left: 10px; font-size: 20px;width: 25px;margin-top:8px;"></span></span>
+                                        <div class="product-container-image-buttons">
+                                            <span class="bg_slider" id="QuickShopitem"><span   >QUICK SHOP</span><span class="fa fa-eye" style="margin-left: 8px; font-size: 20px;width: 25px;margin-top:8px;"></span></span>
+                                            <span class="bg_slider" id="cartid"><span >ADD TO CART</span><span class="fa fa-shopping-cart" style="margin-left: 10px; font-size: 20px;width: 25px;margin-top:8px;"></span></span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="product-container-desc">
+                                        <span id="productDescriptionPageid<%=i%>"><%=products.title%></span><br>
+                                        <span class="fa fa-star " style="color: orange;"></span>
+                                        <span class="fa fa-star " style="color: orange;"></span>
+                                        <span class="fa fa-star " style="color: orange;"></span>
+                                        <span class="fa fa-star " style="color: orange;"></span>
+                                        <span class="fa fa-star " style="color: orange;"></span>
+                                        <span class="product-container-desc-reviews"><%=Math.floor((Math.random()*200)+40)%> reviews</span><br>
+                                        <span class="product-container-desc-price">₹<%=products.price%></span>
+                                    </div>
+
+                                    <script>
+                                        document.getElementById(`product-container-image<%=i%>`).addEventListener("click", function() {
+                                            productDescriptionPage(`<%=items[i]%>`);
+                                        });
+
+                                        function productDescriptionPage(item) {
+                                            localStorage.setItem("productDescriptionpageitem", JSON.stringify(item));
+                                            let productDescriptionpageitem = JSON.parse(localStorage.getItem("productDescriptionpageitem"))
+                                            console.log(productDescriptionpageitem);
+                                            window.location.href = "/productDetails";
+                                        }
+                                    </script>
+
+
+
                                 </div>
-                            </div>
-
-
-                            <div class="product-container-desc">
-                                <span id="productDescriptionPageid<%=i%>"><%=products.title%></span><br>
-                                <span class="fa fa-star " style="color: orange;"></span>
-                                <span class="fa fa-star " style="color: orange;"></span>
-                                <span class="fa fa-star " style="color: orange;"></span>
-                                <span class="fa fa-star " style="color: orange;"></span>
-                                <span class="fa fa-star " style="color: orange;"></span>
-                                <span class="product-container-desc-reviews"><%=Math.floor((Math.random()*200)+40)%> reviews</span><br>
-                                <span class="product-container-desc-price">₹<%=products.price%></span>
-                            </div>
-
-                            <script>
-                                document.getElementById(`product-container-image<%=i%>`).addEventListener("click", function() {
-                                    productDescriptionPage(`<%=items[i]%>`);
-                                });
-
-                                function productDescriptionPage(item) {
-                                    localStorage.setItem("productDescriptionpageitem", JSON.stringify(item));
-                                    let productDescriptionpageitem = JSON.parse(localStorage.getItem("productDescriptionpageitem"))
-                                    console.log(productDescriptionpageitem);
-                                    window.location.href = "/productDetails";
-                                }
-                            </script>
-
-
-
-                        </div>
-                        <% }) %>
-        </div>
-    </main>
-    <footer></footer>
-    <a href=""></a>
-    <a href="/nutrition&health"></a>
-</body>
+                                <% }) %>
+                </div>
+            </main>
+            <%- include("../public/components/footer.ejs")%>
+                <a href=""></a>
+                <a href="/nutrition&health"></a>
+    </body>
 
 </html>
 
