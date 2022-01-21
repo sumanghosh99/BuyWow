@@ -14,16 +14,17 @@
 </head>
 
 <body>
-    <%- include("../public/components/navbar.ejs")%>
-        <main></main>
-        <%- include("../public/components/footer.ejs")%>
+    <header></header>
+    <main></main>
+    <footer></footer>
 </body>
 
 </html>
 <script type="module">
-    let cart = document.getElementById("cart"); cart.addEventListener("click", openNav); function openNav() { document.getElementById("mySidenav").style.width = "450px"; let item = JSON.parse( localStorage.getItem("productDescriptionpagecartitems") ); let
-    sum = 0; for (let i = 0; i
-    < item.length; i++) { sum=s um + item[i].price; } let totalPrice=s um; if (item.length==0 ) { document.getElementById( "cartItems" ).innerHTML=` <div id="mpt">
+    //integrating navbar and footer======== import nav from "/components/navbar.js"; let hearder = document.querySelector("header"); hearder.innerHTML = nav(); let cart = document.getElementById("cart"); cart.addEventListener("click", openNav); function openNav()
+    { document.getElementById("mySidenav").style.width = "450px"; let item = JSON.parse( localStorage.getItem("productDescriptionpagecartitems") ); let sum = 0; for (let i = 0; i
+    < item.length; i++) { sum=s um + item[i].price; } let totalPrice=s um;
+        if (item.length==0 ) { document.getElementById( "cartItems" ).innerHTML=` <div id="mpt">
         <p>Your cart is currently empty.</p><a href="index.html">Start Shopping &#8594</a></div>`; let totalprice = document.getElementById("totalPrice"); totalprice.textContent = "₹0"; } else { displayCartItems(item); function displayCartItems(item) { let
         sum = 0; for (let i = 0; i
         < item.length; i++) { sum=s um + item[i].price; } let totalPrice=s um; document.getElementById( "cartItems").innerText="" ; let totalprice=d ocument.getElementById( "totalPrice"); totalprice.textContent="₹0" ; item.map((e,
