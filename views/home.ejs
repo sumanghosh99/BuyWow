@@ -615,6 +615,7 @@
             div1.setAttribute("id", "div1");
             div1.onclick = () => {
                 cartdata(data);
+                
             };
 
             var div2 = document.createElement("div");
@@ -1107,7 +1108,7 @@
         cart.push(item);
         localStorage.setItem("buywowcart", JSON.stringify(cart));
         console.log(cart);
-        window.location.href = "cart.html";
+        window.location.href = "/productitem";
     } //..........................hover data..............
     function onmouseoverimage(data) {
         document.getElementById("img1hover").src = data.img2;
